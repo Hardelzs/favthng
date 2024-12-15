@@ -1,3 +1,5 @@
+
+// import AudioRecorder from "./Components/AudioRecorder"
 import MainFav from "./Components/MainFav"
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
   return (
     <>
     <MainFav></MainFav>
+    {/* <AudioRecorder></AudioRecorder> */}
     </>
   )
 }
