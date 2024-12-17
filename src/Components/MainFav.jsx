@@ -4,6 +4,7 @@ import { MdOutlineFileUpload } from "react-icons/md";
 import { IoCameraOutline } from "react-icons/io5";
 import DrawingApp from "./Drawing";
 import AudioRecorder from "./AudioRecorder";
+import MediaPlayer from "./MediPlayer";
 
 const MainFav = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -85,7 +86,7 @@ const MainFav = () => {
   const renderHeading = () => {
     switch (selectedId) {
       case 1:
-        return <h1> THis is id 1</h1>;
+        return <MediaPlayer></MediaPlayer>
       case 2:
         return (
           <div className="p-4 bg-white rounded-lg shadow-md">
@@ -159,7 +160,7 @@ const MainFav = () => {
               }}
             >
               <input type="color" name="" id="" className="w-52 h-52" />
-              <input type="text" className="absolute top-14 border-none bg-transparent focus:ring-0 focus:outline-none -right-24" />
+              <input type="text" className="h-auto absolute top-14 border-none bg-transparent focus:ring-0 focus:outline-none -right-24" />
             </div>
           </div>
         );

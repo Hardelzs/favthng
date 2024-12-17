@@ -6,7 +6,7 @@ const DrawingApp = () => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [color, setColor] = useState('#000000');
-  const [lineWidth, setLineWidth] = useState(5);
+  const [lineWidth, setLineWidth] = useState(2);
 
   const startDrawing = (e) => {
     const canvas = canvasRef.current;
@@ -73,6 +73,7 @@ const DrawingApp = () => {
         onMouseUp={stopDrawing}
         onMouseLeave={stopDrawing}
       ></canvas>
+      <div></div>
     </div>
   );
 };
