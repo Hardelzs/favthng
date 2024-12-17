@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 
 const AudioRecorder = () => {
-  const [recording, setRecording] = useState(false);
+  const [recording, setRecording] = useState(() => {
+    const savedRecording = localStorage.getItem('recording')
+    return savedRecording === 'true'
+  });
   const [audioUrl, setAudioUrl] = useState(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
