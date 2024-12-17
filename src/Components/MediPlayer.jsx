@@ -58,10 +58,10 @@ const MediaPlayer = () => {
             left: `${position.x}px`,
             top: `${position.y}px`,
             cursor: "move",
+            width: "auto",
+            height: "auto",
             padding: "10px",
             backgroundColor: "white",
-            border: "1px solid #ccc",
-            borderRadius: "5px",
             display: "inline-block",
         }}
         onMouseDown={handleMouseDown}
