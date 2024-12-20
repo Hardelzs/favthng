@@ -9,9 +9,9 @@ const DrawingApp = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [savedDrawing, setSavedDrawing] = useState(() => {
-    const savedData = localStorage.getItem('drawing');
-    return savedData ? JSON.parse(savedData) : null;
-  }); 
+    const savedImage = localStorage.getItem('userDrawing');
+    return savedImage||null;
+  });
 
   const startDrawing = (e) => {
     const canvas = canvasRef.current;
@@ -61,14 +61,14 @@ const DrawingApp = () => {
     image.src = savedDrawing;
   };
 
-  const saveDrawing = () => {
-    if (!savedDrawing) return;
+  // const savedDrawing = () => {
+  //   if (!savedDrawing) return;
 
-    const link = document.createElement('a');
-    link.href = savedDrawing;
-    link.download = 'drawing.png';
-    link.click();
-  };
+  //   const link = document.createElement('a');
+  //   link.href = savedDrawing;
+  //   link.download = 'drawing.png';
+  //   link.click();
+  // };
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -106,7 +106,10 @@ const DrawingApp = () => {
         </label>
         <button onClick={clearCanvas}>Clear</button>
         <button onClick={pasteDrawing}>Paste</button>
-        <button onClick={saveDrawing}>Save</button>
+        <button                   onClick={() => {
+                    setSavedDrawing(null);
+                    localStorage.removeItem('userDrawing');
+                  }}>Save</button>
       </div>
       <canvas
         ref={canvasRef}
