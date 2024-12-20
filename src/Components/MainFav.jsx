@@ -28,6 +28,7 @@ const MainFav = () => {
       y: e.clientY - position.y,
     });
   };
+  
 
 
   const handleMouseMove = (e) => {
