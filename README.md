@@ -27,3 +27,4 @@ You mentioned you’re facing some issues while implementing and polishing parts
 Outlook
 Great progress so far, Hardelz! 🚀 Keep refining the current features, and if time allows, you can expand to audio and drawings. Let me know if you hit any roadblocks!
 
+![image](https://github.com/user-attachments/assets/c5928b7e-d025-414b-96b8-5e9edfaa29d3)
